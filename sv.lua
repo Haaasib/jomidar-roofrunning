@@ -2,6 +2,16 @@ local QBCore = exports['qb-core']:GetCoreObject()
 
 local lastHeistTime = 0 
 
+function GetPoliceCount()
+    local policeCount = 0
+    for _, playerId in pairs(QBCore.Functions.GetPlayers()) do
+        local Player = QBCore.Functions.GetPlayer(playerId)
+        if Player and Player.PlayerData.job.name == 'police' then
+            policeCount = policeCount + 1
+        end
+    end
+    return policeCount
+end
 
 QBCore.Functions.CreateCallback('jomidar-rr:sv:checkTime', function(source, cb)
     local src = source
@@ -19,11 +29,19 @@ QBCore.Functions.CreateCallback('jomidar-rr:sv:checkTime', function(source, cb)
         cb(true)
     end
 end)
+
 RegisterNetEvent('jomidar-rr:sv:start')
 AddEventHandler('jomidar-rr:sv:start', function()
-    TriggerClientEvent('jomidar-rr:start', source)
+    local source = source
+    local policeCount = GetPoliceCount()
+    
+    if Config.Police == 0 or policeCount >= Config.Police then
+        TriggerClientEvent('jomidar-rr:start', source)
+    else
+        -- Notify the player who triggered the event that there are not enough police officers online
+        TriggerClientEvent('QBCore:Notify', source, "Not enough police officers online.", "error")
+    end
 end)
-
 
 RegisterNetEvent('jomidar:handleItemSpawn', function()
     local src = source
