@@ -1,20 +1,24 @@
 Config = {}
 
-Config.CoolDown     =  3600  -- sec
+Config.Police       =  0      -- set police count
+
+Config.CoolDown     =  3600   -- sec
 
 Config.MiniTime     =  1000
 
-Config.Gridx        =  2
+Config.Gridx        =  4
 
 Config.Gridy        =  4
+
+Config.Progressbar  = 5000    -- second
 
 Config.spawnedProps = {}
 
 
 Config.RoofRunning  = {
     ["acprops"] = {
-        [1] =  {model = "prop_aircon_s_04a", coords = vector3(-586.45, -282.29, 48.32)},
-        [2] =  {model = "prop_aircon_s_04a", coords = vector3(-603.92, -276.48, 49.52)},
+        [1] =  {model = "prop_aircon_s_04a", coords = vector3(-586.45, -282.29, 49.32)},
+        [2] =  {model = "prop_aircon_s_04a", coords = vector3(-603.92, -276.48, 50.52)},
         [3] =  {model = "prop_aircon_s_04a", coords = vector3(-597.04, -271.93, 48.52)},
         [4] =  {model = "prop_aircon_s_04a", coords = vector3(-613.37, -254.02, 51.31)},
         [5] =  {model = "prop_aircon_s_04a", coords = vector3(-619.53, -264.32, 50.3)},
