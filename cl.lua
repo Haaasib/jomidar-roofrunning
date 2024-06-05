@@ -87,6 +87,7 @@ AddEventHandler('jomidar-rr:stop', function()
         SendNUIMessage({showUI = false; })
 end)
 
+
 RegisterNetEvent('jomidar-rr:start')
 AddEventHandler('jomidar-rr:start', function()
     QBCore.Functions.TriggerCallback('jomidar-rr:sv:checkTime', function(time)
@@ -109,7 +110,7 @@ AddEventHandler('jomidar-rr:cl:start', function(data)
         -- Start the skill check game
         exports['skillchecks']:startSameGame(Config.MiniTime , Config.Gridx, Config.Gridy , function(success)
             if success then
-                QBCore.Functions.Progressbar("remove_ac", "Steal Ac Part..", 5000, false, true, {
+                QBCore.Functions.Progressbar("remove_ac", "Steal Ac Part..", Config.Progressbar, false, true, {
                     disableMovement = true,
                     disableCarMovement = false,
                     disableMouse = false,
