@@ -111,7 +111,7 @@ AddEventHandler('jomidar-rr:cl:start', function(data)
     
     if DoesEntityExist(entity) then
         -- Start the skill check game
-        exports['nopixelV4minigame']:startSameGame(Config.MiniTime , Config.Gridx, Config.Gridy , function(success)
+        exports['skillchecks']:startSameGame(Config.MiniTime , Config.Gridx, Config.Gridy , function(success)
             if success then
                 QBCore.Functions.Progressbar("remove_ac", "Steal Ac Part..", 5000, false, true, {
                     disableMovement = true,
