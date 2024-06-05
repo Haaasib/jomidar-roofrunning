@@ -1,8 +1,15 @@
 # JOMIDAR ROOF RUNNING 
-nopixel v4 roof running
 
-# ITEMS
- add to qb-core/shared/items.lua
+* NOPIXEL V4 ROOF RUNNING SCRIPT
+
+# Item Icons
+
+* Download the script and open images folder, put it in the qb-inventory/html/images directory.
+# Installations
+
+# Add the following code to your qb-core/shared/items.lua
+
+ ```
 ac_vent = {
     ["name"] = "ac_vent",
     ["label"] = "AC Vent",
@@ -51,9 +58,8 @@ ac_broken = {
     ["combinable"] = nil,
     ["description"] = "A Borken part of an air conditioning system."
 },
-# IMAGES
-add images to qb inventory
-# DEPNEDICES
+```
+# DEPENDENCIES
 
 SKILL CHECK
 
