@@ -54,8 +54,8 @@ end
 
 function createTextUIOnProp(entity)
     exports['j-textui']:create3DTextUIOnEntity(entity, {
-        displayDist = 3.0,
-        interactDist = 1.0,
+        displayDist = 4.0,
+        interactDist = 3.0,
         enableKeyClick = true,
         keyNum = 38,
         key = "E",
