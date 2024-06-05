@@ -61,9 +61,9 @@ ac_broken = {
 ```
 # DEPENDENCIES
 * [SKILL CHECK](https://github.com/Haaasib/nopixelV4minigame)
-
 * [TextUI](https://github.com/Haaasib/j-textui)
-
+* [Npc Interactions]([https://github.com/Haaasib/j-textui](https://github.com/Haaasib/NopixelV4NPCDialogue))
+  
 # Credits
 * [Hasib](https://github.com/Haaasib/) - Creator
 * [QBCore Devs](https://github.com/qbcore-framework/) - For making an awesome framework and enabling me to do this.
