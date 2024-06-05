@@ -60,10 +60,9 @@ ac_broken = {
 },
 ```
 # DEPENDENCIES
+* [SKILL CHECK](https://github.com/Haaasib/nopixelV4minigame)
 
-SKILL CHECK
-
-JOMIDAR-TEXTUI
+* [TextUI](https://github.com/Haaasib/j-textui)
 
 # Credits
 * [Hasib](https://github.com/Haaasib/) - Creator
