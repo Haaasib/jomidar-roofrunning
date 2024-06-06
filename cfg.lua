@@ -14,6 +14,7 @@ Config.Progressbar  = 5000    -- second
 
 Config.spawnedProps = {}
 
+Config.CheckForUpdates = true
 
 Config.RoofRunning  = {
     ["acprops"] = {
