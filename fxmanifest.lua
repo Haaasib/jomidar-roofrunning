@@ -18,7 +18,12 @@ server_scripts {
 client_scripts {
     'cl.lua',
 }
-
+dependencies {
+    'qb-core',
+    'NopixelV4NPCDialogue',
+    'skillchecks',
+    'j-textui'
+}
 ui_page "web/ui.html"
 
 files {
