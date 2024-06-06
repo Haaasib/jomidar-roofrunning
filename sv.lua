@@ -75,7 +75,7 @@ if Config.CheckForUpdates then
                 UpdateLog('Currently unable to fetch the update log.')
                 return
             end
-            UpdateLog('Update Log:\n' .. text)
+            UpdateLog(':' .. text)
         end)
     end
 
