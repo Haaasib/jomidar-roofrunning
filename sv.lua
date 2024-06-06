@@ -69,6 +69,16 @@ if Config.CheckForUpdates then
         print(('^8[J0M1D4R]^3 [Update Log] %s^7'):format(log))
     end
 
+    local function FetchUpdateLog()
+        PerformHttpRequest('https://raw.githubusercontent.com/Haaasib/updates/main/rr-update-log.txt', function(err, text, headers)
+            if not text then
+                UpdateLog('Currently unable to fetch the update log.')
+                return
+            end
+            UpdateLog('Update Log:\n' .. text)
+        end)
+    end
+
     local function CheckMenuVersion()
         PerformHttpRequest('https://raw.githubusercontent.com/Haaasib/updates/main/rr.txt', function(err, text, headers)
             local currentVersion = GetResourceMetadata(GetCurrentResourceName(), 'version')
@@ -84,16 +94,6 @@ if Config.CheckForUpdates then
                 VersionLog('error', ('You are currently running an outdated version, please update to version %s'):format(text))
                 FetchUpdateLog()
             end
-        end)
-    end
-
-    local function FetchUpdateLog()
-        PerformHttpRequest('https://raw.githubusercontent.com/Haaasib/updates/main/rr-update-log.txt', function(err, text, headers)
-            if not text then
-                UpdateLog('Currently unable to fetch the update log.')
-                return
-            end
-            UpdateLog('Update Log:\n' .. text)
         end)
     end
 
