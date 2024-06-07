@@ -3,7 +3,7 @@ lua54 'yes'
 game 'gta5'
 
 name         'jomidar-roofrunning'
-version      '2.0.0'
+version      '2.0.1'
 description  'A multi-framework roof running'
 author       'Hasib'
 
